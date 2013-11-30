@@ -21,6 +21,7 @@ class CancelarEntradaWindow extends SimpleWindow<CanceladorEntradas>{
 	
 	def CancelarEntradaWindow(owner){
 		super(owner, new CanceladorEntradas())
+		taskDescription = "Ingrese el numero de entrada que desea cancelar"
 	}
 	
 	@Override

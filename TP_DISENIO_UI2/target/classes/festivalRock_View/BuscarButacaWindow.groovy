@@ -31,7 +31,7 @@ class BuscarButacaWindow extends SimpleWindow<BuscadorButacas>{
 	@Override
 	protected void createMainTemplate(Panel mainPanel) {
 		title = "Buscador de butacas"
-		taskDescription = "Elija la fecha del festival para seleccionar la butaca."
+		taskDescription = "Elija el festival. Presione Buscar para cargar las fechas y Buscar nuevamente con la fecha seleccionada."
 
 		super.createMainTemplate(mainPanel)
 
@@ -52,10 +52,10 @@ class BuscarButacaWindow extends SimpleWindow<BuscadorButacas>{
 				.setCaption("Cerrar")
 				.onClick({ this.close() } as Action)
 
-		new Button(actionsPanel)
-				.setCaption("Cancelar compra")
-				.onClick({modelObject.add()} as Action)
-				.onClick({this.close()} as Action)
+//		new Button(actionsPanel)
+//				.setCaption("Cancelar compra")
+//				.onClick({modelObject.add()} as Action)
+//				.onClick({this.close()} as Action)
 		//
 		//		Button remove = new Button(actionsPanel)
 		//		remove.setCaption("Borrar")

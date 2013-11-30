@@ -28,24 +28,30 @@ class HomePlanificaciones {
 		planificacion.agregarNoche(homeNoches.get(3))
 		planificacion.agregarNoche(homeNoches.get(4))
 		planificacion.agregarNoche(homeNoches.get(5))
+		planificacion.agregarNoche(homeNoches.get(6)) //6
 		planificaciones << planificacion
 		planificacion = new Planificacion("Personal Fest")
-		planificacion.agregarNoche(homeNoches.get(6)) //6
+		
 		planificacion.agregarNoche(homeNoches.get(7)) //7
 		planificacion.agregarNoche(homeNoches.get(8)) //8
 		planificacion.agregarNoche(homeNoches.get(9)) //9
 		planificacion.agregarNoche(homeNoches.get(10)) //10
+		planificacion.agregarNoche(homeNoches.get(11)) //11
+		
 		planificaciones << planificacion
 		planificacion = new Planificacion("Movistar Fest")
-		planificacion.agregarNoche(homeNoches.get(11)) //11
+		
 		planificacion.agregarNoche(homeNoches.get(12)) //12
 		planificacion.agregarNoche(homeNoches.get(13)) //13
 		planificacion.agregarNoche(homeNoches.get(14)) //14
 		planificacion.agregarNoche(homeNoches.get(15)) //15
-		planificaciones << planificacion
-		planificacion = new Planificacion("Cosquin Rock")
 		planificacion.agregarNoche(homeNoches.get(16)) //16
 		planificacion.agregarNoche(homeNoches.get(17)) //17
+		
+		planificaciones << planificacion
+		planificacion = new Planificacion("Cosquin Rock")
+		
+		
 		planificacion.agregarNoche(homeNoches.get(18)) //18
 		planificacion.agregarNoche(homeNoches.get(19)) //19
 		planificacion.agregarNoche(homeNoches.get(20)) //20

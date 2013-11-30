@@ -33,8 +33,8 @@ import excepciones.ButacaNoEncontradaException
 	}
 		
 	def getBandas(){
-		def bandas = nochesConcierto.collect{ n -> n.bandas }
-		return bandas.first()//TODO no creo q con eso valla	
+		def bandas = nochesConcierto.first().bandas
+		return bandas//TODO no creo q con eso valla	
 	}
 	
 	def getFechas(){

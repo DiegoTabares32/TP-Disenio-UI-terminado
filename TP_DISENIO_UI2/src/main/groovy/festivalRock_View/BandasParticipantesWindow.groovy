@@ -102,11 +102,11 @@ class BandasParticipantesWindow extends SimpleWindow<BuscadorDeBandas> {
 						.setFixedSize(150)
 						.bindContentsToProperty("nombreBanda")											
 						
-		new Column<Banda>(table)  
-						.setTitle("Categoria")
-						.setFixedSize(200)
-						.bindContentsToProperty("categoria")
-						
+//		new Column<Banda>(table)  
+//						.setTitle("Categoria")
+//						.setFixedSize(200)
+//						.bindContentsToProperty("categoria")
+//						
 //		new Column<Banda>(table)
 //						.setTitle("Precio de Categoria")
 //						.setFixedSize(200)

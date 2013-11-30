@@ -15,8 +15,11 @@ import org.uqbar.lacar.ui.model.Action
 
 class ComprarButacaWindow  extends SimpleWindow<CompradorEntradas>{
 
+	
+	
 	ComprarButacaWindow(owner, buscadorButacas, bool){
 		super(owner, new CompradorEntradas(buscadorButacas, bool))
+		taskDescription = "Complete los campos"
 	}
 
 	@Override
@@ -32,7 +35,9 @@ class ComprarButacaWindow  extends SimpleWindow<CompradorEntradas>{
 	@Override
 	protected void createFormPanel(Panel mainPanel) {
 		Panel searchFormPanel = new Panel(mainPanel)
+		
 		searchFormPanel.setLayout(new VerticalLayout())
+		new Label(searchFormPanel).setWidth(300).bindValueToProperty("error")
 		new Label(searchFormPanel).setText("Nombre: ");
 		new TextBox(searchFormPanel).bindValueToProperty("nombre")
 		new Label(searchFormPanel).setText("Apellido: ");
@@ -60,8 +65,10 @@ class ComprarButacaWindow  extends SimpleWindow<CompradorEntradas>{
 	def cerrar(ComprarButacaWindow ventana){
 		if(modelObject.nombre == null || modelObject.apellido == null || modelObject.puesto == null || modelObject.dni == null){
 			//informar el error
+			modelObject.error("Debe completar los campos!!")
 		}else{
 			//comprar
+			modelObject.error( "")
 			this.comprar()
 			ventana.close()		
 		}

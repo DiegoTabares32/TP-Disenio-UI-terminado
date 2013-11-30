@@ -12,6 +12,7 @@ import org.uqbar.commons.utils.Observable;
 @Observable
 class CompradorEntradas {
 
+	def error = "                          "
 	def homePuestos
 	def homeClientes
 	def puestos
@@ -59,6 +60,10 @@ class CompradorEntradas {
 			planificacion.comprarEntrada(fecha, butaca, espectador, comprador, medioDePago, puesto)
 		}
 		
+	}	
+	
+	def error(def message){
+		this.error = message
 	}	
 	
 }

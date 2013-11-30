@@ -47,7 +47,7 @@ class HomeEntrada {
 	}
 	
 	def get(id){
-		return this.entradas.find{ it -> it.id == Integer.valueOf(id)}
+		return this.entradas.find{ it -> it.id == id}
 	}
 	
 	def remove(entradaACancelar){

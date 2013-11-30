@@ -21,7 +21,7 @@ class CanceladorEntradas {
 		error = ""
 		def entradaACancelar
 		try{		
-			entradaACancelar = homeEntradas.get(idEntrada)
+			entradaACancelar = homeEntradas.get(Integer.valueOf(idEntrada))
 		}catch(NumberFormatException){
 			error = "Ingrese solo numeros"
 		}

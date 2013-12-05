@@ -1,6 +1,14 @@
 package domain
 
-class Media implements Complejidad{
+import javax.persistence.Entity;
+
+@Entity
+class Media extends Complejidad{
+	
+	public Media(){
+		super()
+		this.id = "media"
+	}
 	
 	public def getCosto(def tiempo){
 		def anterior = new Facil().getCosto(tiempo)

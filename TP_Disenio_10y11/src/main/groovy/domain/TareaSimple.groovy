@@ -1,5 +1,8 @@
 package domain
 
+import javax.persistence.*
+
+@Entity
 class TareaSimple extends Tarea {
 
 	public TareaSimple(Complejidad complejidad , def completitud){

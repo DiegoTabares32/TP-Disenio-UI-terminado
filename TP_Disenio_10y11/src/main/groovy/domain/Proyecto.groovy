@@ -1,8 +1,16 @@
 package domain
 
+import javax.persistence.*
+
+import org.eclipse.xtend.lib.Property;
+
+@Entity
+@Table(name = "Proyecto")
 class Proyecto {
 	
-	private List<Tarea> tareas;
+	@OneToMany
+	@Property
+	private Set<Tarea> tareas;
 	
 	public Proyecto(){
 		super()

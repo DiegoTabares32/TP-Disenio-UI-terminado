@@ -1,7 +1,15 @@
 package domain
 
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+import org.eclipse.xtend.lib.Property;
+
+@Entity
 class TareaCompuesta extends Tarea{
 
+	@OneToMany
+	@Property
 	private List<Tarea> tareas
 	
 	public TareaCompuesta(){

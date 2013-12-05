@@ -1,7 +1,15 @@
 package domain
 
-class Compleja implements Complejidad{
+import javax.persistence.Entity;
 
+@Entity
+class Compleja extends Complejidad{
+
+	public Compleja(){
+		super()
+		this.id = "compleja" 
+	}
+	
 	public def getCosto(def tiempo){
 		def anterior = tiempo * 25 
 		def base = anterior + anterior * 0.07

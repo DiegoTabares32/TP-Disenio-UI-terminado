@@ -2,11 +2,17 @@ package domain
 
 import javax.persistence.*
 
+
 @Entity
 @Table(name = "Proyecto")
 class Proyecto {
 	
+	@Id
+	@GeneratedValue
+	private Long Id
+	
 	@OneToMany
+	@JoinColumn(name="Id_Proyecto")
 	private Set<Tarea> tareas;
 	
 	public Proyecto(){
@@ -27,10 +33,11 @@ class Proyecto {
 	}
 	
 	public def getCompletitud(){
-		return this.tareas.sum { t -> t.completitud }
+		return this.tareas.sum { t -> t.getCompletitud }
 	}
 	
 	public def getTiempoTotal(){
 		return this.tareas.sum{ t-> t.getTiempoTotal()}
 	}
+	
 }

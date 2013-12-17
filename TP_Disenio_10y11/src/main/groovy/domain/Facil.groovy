@@ -1,14 +1,11 @@
 package domain
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Complejidad")
 class Facil extends Complejidad{
-
-	public Facil(){
-		super()
-		this.id = "facil"
-	}
 	
 	
 	public def getCosto(def tiempo){

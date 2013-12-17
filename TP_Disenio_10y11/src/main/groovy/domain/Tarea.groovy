@@ -2,18 +2,25 @@ package domain
 
 import javax.persistence.*
 
-@MappedSuperclass
+
+
+@Entity
+@Table(name="Tarea")
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 abstract class Tarea {
 	
-	@Column
-	protected def tiempo;
+	@Id
+	@GeneratedValue
+	private Long id
 	
-	@OneToOne
 	@Column
+	protected Long tiempo;
+	
+	@ManyToOne 
 	protected Complejidad complejidad
 	
 	@Column
-	protected def completitud
+	protected Long completitud
 	
 //	public abstract setTiempo(def tiempo);
 //		
@@ -31,6 +38,10 @@ abstract class Tarea {
 	
 	public def getCostoTotal(){
 		return this.complejidad.getCosto(this.tiempo);
+	}
+	
+	public def getCantidadSubtareas(){
+		return 0
 	}
 
 }

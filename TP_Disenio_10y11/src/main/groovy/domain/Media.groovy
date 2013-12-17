@@ -1,16 +1,13 @@
 package domain
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Complejidad")
 class Media extends Complejidad{
 	
-	public Media(){
-		super()
-		this.id = "media"
-	}
-	
-	public def getCosto(def tiempo){
+	public def getCosto(tiempo){
 		def anterior = new Facil().getCosto(tiempo)
 		return  anterior + anterior * 0.05  
 	}

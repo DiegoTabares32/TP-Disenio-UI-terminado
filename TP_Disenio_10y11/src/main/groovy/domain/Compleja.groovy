@@ -1,16 +1,14 @@
 package domain
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Complejidad")
 class Compleja extends Complejidad{
 
-	public Compleja(){
-		super()
-		this.id = "compleja" 
-	}
 	
-	public def getCosto(def tiempo){
+	public def getCosto(tiempo){
 		def anterior = tiempo * 25 
 		def base = anterior + anterior * 0.07
 		def dias = tiempo - 10
@@ -24,7 +22,7 @@ class Compleja extends Complejidad{
 	}
 
 	@Override
-	public def getDiasAtraso(def tiempo) {
+	public def getDiasAtraso(tiempo) {
 		return tiempo * 0.2 + 8
 	}
 }

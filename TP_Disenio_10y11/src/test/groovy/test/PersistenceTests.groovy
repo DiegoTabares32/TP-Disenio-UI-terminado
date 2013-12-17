@@ -12,7 +12,7 @@ import domain.Proyecto
 
 class PersistenceTests {
 
-
+		
         private HomeProyecto homeProyecto = new HomeProyecto();        
         
         @Before

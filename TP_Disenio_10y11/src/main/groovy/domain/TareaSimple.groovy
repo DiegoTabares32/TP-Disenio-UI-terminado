@@ -3,6 +3,7 @@ package domain
 import javax.persistence.*
 
 @Entity
+@Table(name="Tarea")
 class TareaSimple extends Tarea {
 
 	public TareaSimple(Complejidad complejidad , def completitud){
@@ -30,9 +31,9 @@ class TareaSimple extends Tarea {
 		return this.tiempo
 	}
 	
-//	@Override
-//	def getCompletitud() {
-//		return completitud
-//	}
-	
+	/**@Override
+	def getCompletitud() {
+		return completitud
+	}**/
+
 }

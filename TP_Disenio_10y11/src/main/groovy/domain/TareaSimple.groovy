@@ -31,9 +31,8 @@ class TareaSimple extends Tarea {
 		return this.tiempo
 	}
 	
-	/**@Override
-	def getCompletitud() {
-		return completitud
-	}**/
+	public def getCantidadSubtareas(){
+		return 0
+	}
 
 }

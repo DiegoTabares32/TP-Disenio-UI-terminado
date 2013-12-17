@@ -48,8 +48,8 @@ class TareaCompuesta extends Tarea{
 		return this.tareas.sum{ t -> t.getMaxDiasDeAtraso() }
 	}
 
-	@Override
-	public def getCompletitud() {
+	//@Override
+	public getCompletitud() {
 		return this.tareas.sum{ t -> t.completitud }
 	}
 

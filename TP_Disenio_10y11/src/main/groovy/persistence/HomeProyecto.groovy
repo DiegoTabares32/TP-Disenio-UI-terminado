@@ -17,38 +17,36 @@ public class HomeProyecto {
 		return getManager().createQuery("from Proyecto").getResultList();
 	}
 
-	def getTareasConMasDeDosSubtareas(Proyecto proyecto){
-		def resultados
-		EntityManager session = getManager()
-		session.open
-		try {
-			resultados = proyecto.tareas.each{ t ->
-				if (t.getCantidadSubtareas() > 2{  masDeDosSubtareas << t  }  }
-		} catch(HibernateException e) {
-			throw new RuntimeException(e)
-		} finally {
-			session.close()
-		}
-		resultados
-	}
-
-
 	def getTareasMenoresADiezDias(Proyecto proyecto){
-		def resultados
+		def resultados = []
 		EntityManager session = getManager()
 		session.open
 		try {
 			resultados = proyecto.tareas.each{ t ->
 				if (t.getTiempoTotal() < 10){
-					resultados<< t
+					resultados.add(t)
 				}
 			}
-		} catch(HibernateException e) {
-			throw new RuntimeException(e)
 		} finally {
 			session.close()
 		}
 		resultados
 	}
 
+	def getTareasConMasDeDosSubtareas(Proyecto proyecto){
+		def resultados = []
+		EntityManager session = getManager()
+		session.open
+		try {
+			resultados = proyecto.tareas.each{ t ->
+				if (t.getCantidadSubtareas() > 2){
+					resultados.add(t)
+				}
+			}
+		} finally {
+			session.close()
+		}
+		resultados
+	}
+	
 }

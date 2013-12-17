@@ -33,7 +33,7 @@ class Proyecto {
 	}
 	
 	public def getCompletitud(){
-		return this.tareas.sum { t -> t.getCompletitud }
+		return this.tareas.sum { t -> t.getCompletitud() }
 	}
 	
 	public def getTiempoTotal(){

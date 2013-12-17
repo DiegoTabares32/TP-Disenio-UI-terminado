@@ -21,9 +21,9 @@
                         <property name="hibernate.archive.autodetection" value="class"/>        
         
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" /> 
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/prueba" /> 
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/db" /> 
             <property name="hibernate.connection.username" value="root" /> 
-            <property name="hibernate.connection.password" value="mysql" />
+            <property name="hibernate.connection.password" value="disenio" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />             
                             
             <property name="hibernate.show_sql" value="true" /> 

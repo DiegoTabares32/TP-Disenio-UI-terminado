@@ -8,14 +8,14 @@
     <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
             <provider>org.hibernate.ejb.HibernatePersistence</provider>
             
-            <class>src.main.groovy.domain.Proyecto</class>
-            <class>src.main.groovy.domain.Tarea</class>
-            <class>src.main.groovy.domain.TareaSimple</class>
-            <class>src.main.groovy.domain.TareaCompuesta</class>
-            <class>src.main.groovy.domain.Complejidad</class>
-            <class>src.main.groovy.domain.Compleja</class>
-            <class>src.main.groovy.domain.Facil</class>
-            <class>src.main.groovy.domain.Media</class>
+            <class>domain.Proyecto</class>
+            <class>domain.Tarea</class>
+            <class>domain.TareaSimple</class>
+            <class>domain.TareaCompuesta</class>
+            <class>domain.Complejidad</class>
+            <class>domain.Compleja</class>
+            <class>domain.Facil</class>
+            <class>domain.Media</class>
              
         <properties> 
                         <property name="hibernate.archive.autodetection" value="class"/>        

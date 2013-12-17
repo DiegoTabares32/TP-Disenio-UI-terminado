@@ -7,6 +7,7 @@ import org.junit.After;
 import org.junit.Before
 import org.junit.Test
 
+import domain.Proyecto
 import domain.Compleja
 import domain.Complejidad
 import domain.Facil
@@ -87,15 +88,20 @@ class Tests {
 	}
 	
 	//@Test
-	public void etTareasConMasDeDosSubtareas(){
-		def resultados = homeProyecto.get(proyecto)
-		assertEquals(resultados.size(), 1)
+	public void testGetTareasConMasDeDosSubtareas(){
+		def resultados = [] as Set
+		resultados = homeProyecto.getTareasConMasDeDosSubtareas(proyecto)
+		assert(resultados.contains(tareaCompuesta))
 	}
 	
 	//@Test
 	public void testGetTareasMenoresADiezDias(){
-		def resultados = homeProyecto.getTareasMenoresADiezDias(proyecto)
-		assertEquals(resultados.size(), 4)
+		def resultados = [] as Set
+		resultados = homeProyecto.getTareasMenoresADiezDias(proyecto)
+		assert(resultados.contains(tareaSimple1))
+		assert(resultados.contains(tareaSimple2))
+		assert(resultados.contains(tareaSimple3))
+		assert(resultados.contains(tareaSimple4))
 	}
 	
 	@After

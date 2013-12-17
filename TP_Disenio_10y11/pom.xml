@@ -163,5 +163,4 @@
 		</pluginManagement>
   </build>
   
-  <packaging>maven-plugin</packaging>
 </project>
